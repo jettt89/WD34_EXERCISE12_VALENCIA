@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSpot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css
+    ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+
+   <style>
+    body {
+        background-image: url('/img/bgflame.gif');
+        text-align: center;
+    }
+
+    #slides{
+        color: grey;
+        background-color: grey !important;
+    }
+
+    .carousel{
+        color: grey;
+        background-color: grey !important;
+    }
+   
+    .card-body1{
+        background:
+        url(/img/bgif.gif) top/100% auto no-repeat;
+        background-repeat:no-repeat;
+        color: rgb(255, 255, 255);
+    }
+    .highlight-container {
+        display: inline-block;
+    }
+    .highlight-container:before{
+        content: " ";
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        position: absolute;
+        background: #02020200;
+        top: -1px;
+        left: -1px;
+    }
+    .marquee{
+        color: rgb(128, 126, 126);
+    }
+    .site-footer{
+        text-align: center;
+        background: r   gba(0, 0, 0, 0.301);
+        background-image: url(/img/pacgod.gif);
+        background-position: center;
+        opacity: 0.3;
+        background-size: 1560px 100px;
+        padding: 0px, 0px, 10px, 0px;
+        color: rgb(255, 255, 255);
+    }
+
+    .page-wrap {
+        min-height: 100%;
+        /* equal to footer he   ight */
+        margin-bottom: -142px; 
+    }
+    .page-wrap:after {
+        content: "";
+        display: block;
+    }
+    .modal-body{
+        background-image:url(/img/mario.gif);
+        color: rgb(0, 174, 255);
+        background-color: aqua !important;
+    }
+    .form-control{
+       background-color:transparent !important;
+       border:solid !important;
+    }
+    .modal-content{
+        background-color:transparent !important;
+       border:solid !important;
+        color: white;     
+    }
+    .videotext{
+        background-color: rgba(3, 3, 3, 0.555);
+        border: dashed;
+        border-color: rgba(80, 80, 80, 0.555);
+        color: rgb(206, 205, 205);
+        padding: 0px, 0px, 50px, 0px;
+        font-family: 'Permanent Marker', cursive;
+    }
+    .form-control{
+        color: white;
+    }
+    .card-title{
+        font-family: 'Fredoka One', cursive;
+        font-size: x-large;
+    }
+    .card-text{
+        font-family: 'Inconsolata', monospace;
+    }
+    .navbar-brand2{
+        position: center;
+    }
+    .gamelist{
+        background: 50px;
+        background-color: rgba(3, 3, 3, 0.555);
+        border: dashed;
+        border-color: rgba(80, 80, 80, 0.555);
+        color: rgb(206, 205, 205);
+        padding: 0px, 0px, 50px, 0px;
+        font-family: 'Permanent Marker', cursive;
+    }
+    .historyVid{
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+
+
+    
+   </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top ms-auto">
+        <!-- sticky-top, fixed-top, fixed-bottom -->
+        <!-- navbar-dark, nav-barlight [for the text color] -->
+    <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="#">
+        <img src="/img/gamespot.png" width="115px">
+        </a>
+        <a class="navbar-brand2" href="#"><img src="/img/gamespotmiddle.png" width="360px"></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#thisIsTheMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="thisIsTheMenu"> </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link drowpdown-toggle" id="dropdownMenu" 
+                    data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                    <i class="fa-solid fa-video"></i> VideoGuide
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="#dropdownMenu">
+                        <li>
+                            <a href="https://tinyurl.com/exec12b" target="_blank" class="dropdown-item">
+                                DragoNest Gameplay 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tinyurl.com/exec12c" target="_blank" class="dropdown-item">
+                                Genshin  Gameplay 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tinyurl.com/exec12d" target="_blank" class="dropdown-item">
+                                Lineage2 Gameplay 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tinyurl.com/exec12e" target="_blank" class="dropdown-item">
+                                Mir4 Gameplay 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.freetogame.com/top/pc/mmorpg" target="_blank" class="nav-link">
+                        <i class="fa-solid fa-list"></i>
+                        Top-10 Free MMORPG
+                    </a>
+                              
+            
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- CAROUSEL START -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <div class="container"> 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+        <div class="item active">
+            
+            <img src="/img/add/4.jpg" alt="Uncharted4" style="width:100%;">
+        </div>
+        <div class="item">
+            <img src="/img/add/5.jpg" alt="New york" style="width:100%;"> 
+        </div>
+        
+        <div class="item">
+            <img src="/img/add/2.jpg" alt="Chicago" style="width:100%;">
+        </div>
+        
+        <div class="item">
+            <img src="/img/add/3.jpg" alt="New york" style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="/img/uncharted.gif" alt="Uncharted4" style="width:100%;">
+        </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left"
+           onmouseover="this.stop();"
+           onmouseout="this.start();">GameSpot™- above images: Uncharted 4, Aion Wordmap, Lost Ark, DragonNest World.
+       </marquee>
+   </div>
+    </div>
+<hr>
+<hr>
+<!-- CARDS START -->
+<div class="container">
+    <div class="videotext"> <h3> About GAMESPOT™ & THE HISTORY OF MMORPG!</h3></div>
+    <br>
+    <div class="row gx-auto gy-3">
+        <div class="col-md-12">
+            <div class="card bg-dark text-secondary text-center">
+                <div class="card-header">
+                    ••• GameSpot Gaming Review Website •••
+                </div>
+                <div class="card-body1 ">
+                    <h4 class="card-title text-white">Welcome to GameSpot™</h4>
+                    <br>
+                    <p class="card-text"> <span class="highlight-container"><span=class="highlight">Hello there!
+                        The GameSpot website was launched in December 2022 with the aim to review TOP MMORPG Games. 
+                        What Does MMORPG Stand For? MMORPG means massively multiplayer online role-playing games, and it's a type of video game that combines elements of role-playing games (RPGs) with the gameplay of multiplayer online gaming worlds.
+                        GameSpot has two objectives: to report on the video games industry in the region as well as to serve as the go-to site for everything video game and anything remotely geek for fans all over the world.
+                        Since the establishment of GameSpot™, the edition has become a reputable gaming publication online. You'll be seeing more cool changes and content additions in the upcoming months as we sacrifice our sleeps to produce more quality video content and features as well as expanding our reach to gamers wordwide.</span></span>                  
+                    </p>
+                    <br>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+       <div class="historyVid">
+        <video width="100%" height="320" controls>
+        <source src="/img/vid/History.mp4" type="video/mp4">
+        </video>
+       </div>
+       <hr>
+       <hr>     
+        <div class="gamelist"> <h3> Games Played & Reviewed!</h3></div>
+        <div class="col-md-3">
+            
+            <div class="card bg-dark text-secondary text-center">
+                <video  controls poster="/img/dragonest.jpg" controls="controls" type="video/mp4" autoplay="false" preload="none"><source src="/img/vid/dragonest.mp4"></video>                
+                <div class="card-body">
+                    <h3 class="card-title text-white"> Dragon Nest</h3>
+                    <!-- For the title of your selection -->
+                    <h5 class="card-subtitle text-info"><a href="https://fullclientsea.dragonnest.com/iDNInstaller.exe" target="_blank">Download DragonNest</a>
+                    </h5>
+                    <!-- Subtitle -->
+                    <br>
+                    <p class="card-text">
+                        Dragon Nest (Korean: 드래곤네스트) is a free-to-play fantasy MMORPG developed by Eyedentity and currently available in different regions and languages. Aside from boasting a non-targeting combat and skill system within instance dungeons.
+                    </p>
+                    <!-- Content -->
+
+                    <a href="https://en.wikipedia.org/wiki/Dragon_Nest" target="_blank" class="btn btn-secondary">
+                        Visit WIKI™
+                    </a>
+                    <br>
+                        <a href="https://www.facebook.com/dragonnestsea/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/DragonNest" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                        <a href="https://www.instagram.com/dragonnest.official" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://sea.dragonnest.com/news/pm-blog" target="_blank"> <i class="fa-sharp fa-solid fa-blog"></i> </a>
+                    <!-- Links and Buttons -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark text-secondary text-center">
+                <video  controls poster="/img/mir4.jpg" controls="controls" type="video/mp4" autoplay="false" preload="none"><source src="/img/vid/Mir4.mp4"></video>
+                <div class="card-body">
+                    <h3 class="card-title text-white">Mir4</h3>
+                    <!-- For the title of your selection -->
+                    <h5 class="card-subtitle text-info"><a href="https://live-dl.mir4global.com/global-launcher/Mir4Launcher_Install.exe" target="_blank">Download MIR4 </a></h5>
+                    <!-- Subtitle -->
+                    <br>
+                    <p class="card-text">
+                        Mir 4 revolves around the story of an Asian princess from a fallen kingdom who runs away from an ambitious lord, who wants to kidnap and marry her as a way to become king. Users get to select a role -- warrior, lancer, Taoist, sorcerer or archer.
+                    </p>
+                    <!-- Content -->
+
+                    <a href="https://tinyurl.com/koreanherald12" target="_blank" class="btn btn-secondary">
+                        Visit KoreanHerald
+                    </a>
+                    <br>
+                        <a href="https://www.facebook.com/mir4global/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/mir4official" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                        <a href="https://www.instagram.com/mir4.official" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://forum.mir4global.com/board/notice?lang=en" target="_blank"> <i class="fa-sharp fa-solid fa-blog"></i> </a>
+                    <!-- Links and Buttons -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark text-secondary text-center">
+                <video  controls poster="/img/lineage2.jpg" controls="controls" type="video/mp4" autoplay="false" preload="none"><source src="/img/vid/Lineage2a.mp4"></video>
+                <div class="card-body">
+                    <h3 class="card-title text-white">Lineage II</h3>
+                    <!-- For the title of your selection -->
+                    <h5 class="card-subtitle text-info"><a href="https://tinyurl.com/lineage2dl" target="_blank">Download Lineage II</a></h5>
+                    <!-- Subtitle -->
+                    <br>
+                    <p class="card-text">
+                        The world of Lineage II is a war-torn land spanning two continents, where trust and betrayal clash as three kingdoms vie for power. The young king Raoul has successfully quenched a civil war and established the newest kingdom, Aden. Join the fight for the Kingdom!
+                    </p>
+                    <!-- Content -->
+
+                    <a href="https://tinyurl.com/lineage2fan" target="_blank" class="btn btn-secondary">
+                        Visit LineageFandom
+                    </a>
+                    <br>
+                        <a href="https://www.facebook.com/lineage2" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/LineageII" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                        <a href="https://www.instagram.com/lineage2_official" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://www.lineage2.com/en-us/about" target="_blank"> <i class="fa-sharp fa-solid fa-blog"></i> </a>
+                    <!-- Links and Buttons -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-dark text-secondary text-center">
+                <video  controls poster="/img/genshin.jpg" controls="controls" type="video/mp4" autoplay="false" preload="none"><source src="/img/vid/Genshin.mp4"></video>
+                    <div class="card-body">
+                        <h3 class="card-title text-white">Genshin Impact</h3>
+                        <!-- For the title of your selection -->
+                        <h5 class="card-subtitle text-info"><a href="https://tinyurl.com/genshinDL1" target="_blank">Download Genshin Impact</a></h5>
+                        <!-- Subtitle -->
+                        <br>
+                        <p class="card-text">
+                            The story follows the Traveler, who has traveled across countless worlds with their twin sibling before becoming separated in Teyvat. The Traveler's search of the lost sibling with their companion and becomes involved in the affairs of Teyvat's nations.
+                        </p>
+                        <!-- Content -->
+
+                        <a href="https://tinyurl.com/genshinwiki1" target="_blank" class="btn btn-secondary">
+                            Visit WIKI™
+                        </a>
+                        <br>
+                        <a href="https://www.facebook.com/Genshinimpact" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/GenshinImpact" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                        <a href="https://www.instagram.com/genshinimpact" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                        <a href="https://blog.playstation.com/tag/genshin-impact" target="_blank"> <i class="fa-sharp fa-solid fa-blog"></i> </a>
+                        <!-- Links and Buttons -->
+                    </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+ 
+
+<!-- FLEXBOX! -->
+
+<div class="modal fade" id="sampleModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Suggest a Game, We will review it!</h3>
+            </div>
+            <div class="modal-body text-success card-text">
+                <form action="">
+                    <label>Game Title</label>
+                    <br>
+                    <input type="text" class="form-control">
+                    <br>
+                    <label>Game Url</label>
+                    <br>
+                    <input type="text" class="form-control">
+                    <br>
+                    <label>Comment/Suggestions</label>
+                    <br>
+                    <textarea class="form-control"></textarea>
+                    <br>
+                    <input type="submit" class="btn btn-success w-100">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">
+                    Close 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<button class="btn btn-dark" text-align="center"data-toggle="modal" data-target="#sampleModal">Game Suggestions? Talk to us!</button>
+<!-- 
+    add modal-dialog-centered = lets you center your modal
+    modal sizes = modal-sm, modal-lg, modal-xl, modal-fullscreen
+-->
+<hr>
+<br>
+<div class="page-wrap">
+    <footer class="site-footer">
+        <p>Class WD34P: Studen Name: Jett Valencia<br>
+        <a href="https://www.facebook.com/ediwiw89/" target="_blank"> <img src="/img/menu.png"></a> </p>
+        <p> Copyright © 2022 Gamespot™, INC.</p>
+    </footer>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.js"></script>
+
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+</html>
